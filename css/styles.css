@@ -1,0 +1,388 @@
+/*Mobile*/
+@import url('https : //fonts.googleapis.com/css2?family=Roboto : wght@100&display=swap');
+
+*     {
+    box-sizing : border-box;
+    margin : 0;
+    padding : 0;
+    scroll-behavior : smooth;
+  }
+  body {
+    font-family : 'Roboto', sans-serif;
+    font-size : 18px;
+    line-height : 1.2;
+    background-color: rgb(226, 217, 217);
+    
+  }
+  header {
+    display : flex;
+    justify-content : space-between;
+    align-items: center;
+    background-color: black;
+    color : rgb(235, 124, 179);
+    box-shadow : 20px 20px 20px blueviolet;
+    margin : auto;
+    font-size : 20px;
+    width : 100%;
+    height : 120px;
+   
+  }
+
+  a {
+    text-decoration : none;
+    color : inherit;
+  }
+ 
+  
+  /*Menu de Navegacion*/
+
+ 
+  :root {
+    --white: #fff;
+    --bg: #dbebfa;
+    --pink: #9b29b7;
+    --blue-dark: #4763ef;
+    --font: 'Roboto Mono', sans-serif;
+  }
+  
+  html {
+    font-size: 25%;
+  }
+  
+  
+  li.menu-item {
+    color: palevioletred;
+    font-size: 6rem;
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+  }
+ 
+  li.menu-item:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--pink);
+    transform-origin: bottom right;
+    transition: transform 0.6s ease-out;
+  }
+  
+  li.menu-item:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+/*BOTON HAMBUERGUESA*/
+
+#menu-btn {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+#open-menu{
+  display : flex;
+  justify-content : space-between;
+  align-items: center;
+}
+
+img#close-menu{
+  display: none;
+}
+
+nav{
+  display: none;
+
+}
+  
+body.mobile-menu-active img#close-menu {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: flex-end;
+ 
+
+ 
+}
+body.mobile-menu-active img#open-menu {
+  display : none;
+  align-items: flex-start;
+  
+}
+body.mobile-menu-active header {
+  height : 50vh;
+  flex-wrap : wrap;
+  align-items : flex-start;
+  transition : height 0.3s;
+ 
+}
+body.mobile-menu-active nav {
+  display: block;
+  width : 100%;
+  height : 50%;
+ 
+}
+body.mobile-menu-active ul#menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/*Modo Oscuro*/
+
+input[type="checkbox"]{
+position: relative;
+width: 40px;
+height: 20px;
+background-color: blueviolet;
+appearance: none;
+outline: none;
+border-radius: 20px;
+cursor: pointer;
+transition: 0.5s ease;
+
+}
+
+input[type="checkbox"]:checked {
+  background-color: pink;
+}
+
+input[type="checkbox"]::before{
+  content:'';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.7s ease;
+}
+
+input[type="checkbox"]:checked::before{
+  transform: translateX(20px);
+}
+
+.dark-mode{
+  background-color: #3b0237;
+  color: #f2f2f2;
+}
+
+.btn-oscuro{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+/*Foto*/
+
+.imagen {
+  display : flex;
+  justify-content : center;
+  align-items : center;
+  padding : 0;
+  width : 50%;
+  border-radius : 50%;
+  box-shadow : 0 0 10px 7px rgba(240.58695652173904, 0, 255, 0.51);
+  vertical-align : middle;
+  display : inline-block;
+}
+
+/*Seccion Inicio*/
+
+
+#inicio {
+  display : flex;
+  flex-direction : column;
+  background-color : #91447d;
+  text-align : center;
+  opacity : 0.9;
+  padding : 20px;
+  background-image : url(/img/playa.jpg);
+  background-size: 100%;
+}
+h1 {
+  font-family : "Montserrat", Sans-serif;
+  color : white;
+  font-size : 36px;
+  margin : 0;
+  padding : 0;
+  text-align : center;
+  line-height : 1.5;
+}
+p {
+  color : rgb(255, 254, 254);
+  font-size : 17px;
+  margin : 10px;
+  padding : 10px;
+  text-align : center;
+}
+  .acerca-de-mi {
+  text-align: center;
+  background-color : rgb(252, 252, 252);
+  border: 1px solid;
+  color : rgb(190, 66, 153);
+  padding : 15px;
+  margin: 0;
+  border: 0;
+  border-radius : 50px;
+  letter-spacing: 1px;
+  box-shadow : 0 0 5px 5px rgba(240.58695652173904, 0, 255, 0.51);
+
+}
+  .acerca-de-mi :hover {
+  color : rgb(190, 66, 153);
+  font-size : x-large;
+  font : bold;
+  transition : background-color 0.3s;
+
+}
+
+/*section contacto*/
+
+.hablemos {
+  color : black;
+  font-family : "Montserrat", Sans-serif;
+}
+div.cv {
+  text-align : center;
+  background-color : rgb(252, 252, 252);
+  border: 1px solid;
+  color : rgb(190, 66, 153);
+  padding :15px;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  box-shadow : 0 0 5px 5px rgba(240.58695652173904, 0, 255, 0.51); 
+}
+div.cv :hover {
+  background-color : rgb(235, 124, 179)e;
+  color : rgb(190, 66, 153);
+  font-size : x-large;
+  font : bold;
+  transition : background-color 0.3s;
+}
+#contacto {
+  display : block;
+  background-color : rgba(216, 32, 155, 0.3);
+  margin : 40px;
+  padding : 20px;
+  text-align : center;
+  border-radius : 20px;
+}
+.redes {
+  text-align : center;
+  list-style : none;
+}
+li.redes {
+  display : inline-block;
+  width : 100px;
+  padding : 20px 20px; 
+}
+
+.redes :hover{
+  background-color : rgb(235, 124, 179)e;
+  color : rgb(190, 66, 153);
+  font-size : x-large;
+  font : bold;
+  transition : background-color 0.3s;
+}
+
+
+/*Pie de pagina*/
+
+
+.footer {
+  color : white;
+  background-color : #af599e;
+  text-align : center;
+  padding : 20px;
+}
+
+p.footer{
+  margin: 0;
+}
+
+a {
+  text-decoration : none;
+  color : inherit;
+}
+main {
+  max-width : 100%;
+  margin : auto;
+}
+ 
+/*Destok*/
+
+
+@media(min-width : 1024px) 
+ 
+{
+.imagen {
+ width : 100%;
+ max-width : 500px;
+}
+h1 {
+ font-size : 60px;
+}
+p {
+ color : white;
+ padding : 20px
+}
+
+section#inicio {
+ flex-direction: row;
+ justify-content : center;
+ padding : 5%;
+}
+
+.presentacion {
+ width : 50%;
+ 
+}
+
+#contacto{
+  margin: 100px 300px;
+}
+.acerca-de-mi{
+ width: 30%;
+ 
+}
+#open-menu {
+ display : none;
+ 
+}
+
+.btn-oscuro{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+
+}
+nav {
+  display : block;
+  justify-content : flex-end;
+ 
+ }
+
+.cv {
+ 
+display:flex;
+flex-direction: column;
+ background-color : #af599e;
+ margin : 0;
+ padding : 20%;
+ border-radius : 20px;
+ color : white;
+ width: 30%;
+}
+
+
+}

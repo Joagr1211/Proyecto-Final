@@ -1,0 +1,287 @@
+/*Mobile*/
+@import url('https : //fonts.googleapis.com/css2?family=Roboto : wght@100&display=swap');
+
+*     {
+    box-sizing : border-box;
+    margin : 0;
+    padding : 0;
+    scroll-behavior : smooth;
+  }
+  body {
+    font-family : 'Roboto', sans-serif;
+    font-size : 18px;
+    line-height : 1.2;
+   
+    
+  }
+  header {
+    display : flex;
+    justify-content : space-between;
+    align-items: center;
+    background-color: black;
+    color : rgba(216, 32, 155, 0.3);
+    box-shadow : 20px 20px 20px blueviolet;
+    margin : auto;
+    font-size : 20px;
+    width : 100%;
+    height : 120px;
+   
+  }
+
+  a {
+    text-decoration : none;
+    color : inherit;
+  }
+
+  /*Modo Oscuro*/
+
+input[type="checkbox"]{
+position: relative;
+width: 40px;
+height: 20px;
+background-color: blueviolet;
+appearance: none;
+outline: none;
+border-radius: 20px;
+cursor: pointer;
+transition: 0.5s ease;
+
+}
+
+input[type="checkbox"]:checked {
+  background-color: pink;
+}
+
+input[type="checkbox"]::before{
+  content:'';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.7s ease;
+}
+
+input[type="checkbox"]:checked::before{
+  transform: translateX(20px);
+}
+
+.dark-mode{
+  background-color: #353435;
+  color: #f2f2f2;
+}
+
+.btn-oscuro{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+
+}
+ 
+  /*Menu de Navegacion*/
+
+ 
+  :root {
+    --white: #fff;
+    --bg: #dbebfa;
+    --pink: #9b29b7;
+    --blue-dark: #4763ef;
+    --font: 'Roboto Mono', sans-serif;
+  }
+  
+  html {
+    font-size: 25%;
+  }
+  
+  
+  li.menu-item {
+    color: palevioletred;
+    font-size: 6rem;
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+  }
+ 
+  li.menu-item:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--pink);
+    transform-origin: bottom right;
+    transition: transform 0.6s ease-out;
+  }
+  
+  li.menu-item:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+/*BOTON HAMBUERGUESA*/
+
+  #menu-btn {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 26px;
+    width: 40px;
+    
+  }
+  
+img#close-menu{
+  display: none;
+}
+
+nav{
+  display: none;
+
+}
+  
+body.mobile-menu-active img#close-menu {
+ display: block;
+ 
+}
+body.mobile-menu-active img#open-menu {
+  display : none;
+}
+body.mobile-menu-active header {
+  height : 60vh;
+  flex-wrap : wrap;
+  align-items : flex-start;
+  transition : height 0.3s;
+ 
+}
+body.mobile-menu-active nav {
+  display: block;
+  width : 100%;
+  height : 50%;
+ 
+}
+body.mobile-menu-active ul#menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+/*Seccion Sobre Mi*/
+
+
+#sobre-mi {
+  
+  background-color : #f79cd8;
+  text-align : center;
+  opacity : 0.9;
+  padding : 20px;
+ 
+  background-size: 100%;
+}
+
+
+h1 {
+  font-family : "Montserrat", Sans-serif;
+  color : rgb(10, 10, 10);
+  font-size : 36px;
+  margin : 0;
+  padding : 0;
+  text-align : center;
+  line-height : 1.5;
+}
+
+p.texto {
+  background-color: rgba(216, 32, 155, 0.3);
+  border-radius: 10px;
+  color : rgb(8, 8, 8);
+  font-size : 17px;
+  margin : 40px;
+  padding : 10px;
+  text-align : justify;
+  
+}
+
+p.pensamiento{
+  
+  color : rgb(8, 8, 8);
+  font-size : 17px;
+  margin : 40px;
+  padding : 10px;
+  text-align : center;
+}
+
+/*Pie de pagina*/
+
+
+.footer {
+  color : white;
+  background-color : #af599e;
+  text-align : center;
+  padding : 20px;
+}
+
+p.footer{
+  margin: 0;
+}
+
+a {
+  text-decoration : none;
+  color : inherit;
+}
+main {
+  max-width : 100%;
+  margin : auto;
+}
+
+.codeando{
+  border-radius: 10px;
+  width: 60%;
+}
+ 
+/*Destok*/
+
+
+@media(min-width : 1024px) 
+ 
+{
+h1 {
+ font-size : 40px;
+}
+p {
+ color : white;
+ margin : 20px;
+ padding : 20px
+}
+#sobre-mi {
+ flex-direction: row;
+ justify-content : center;
+ padding : 5%;
+}
+
+.acerca-de-mi{
+ width: 30%;
+ 
+}
+#open-menu {
+ display : none;
+}
+nav {
+ display : block;
+ justify-content : flex-end;
+}
+
+.btn-oscuro{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+}
+
+}
