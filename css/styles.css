@@ -205,7 +205,7 @@ input[type="checkbox"]:checked::before{
   text-align : center;
   opacity : 0.9;
   padding : 20px;
-  background-image : url(img/playa.jpg);
+  background-image : url(/img/playa.jpg);
   background-size: 100%;
 }
 h1 {
