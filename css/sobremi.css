@@ -129,9 +129,6 @@ input[type="checkbox"]:checked::before{
     background-color: transparent;
     border: 0;
     outline: 0;
-    font-size: 26px;
-    width: 40px;
-    
   }
   
 img#close-menu{
@@ -151,7 +148,7 @@ body.mobile-menu-active img#open-menu {
   display : none;
 }
 body.mobile-menu-active header {
-  height : 60vh;
+  height : 50vh;
   flex-wrap : wrap;
   align-items : flex-start;
   transition : height 0.3s;
@@ -201,20 +198,35 @@ p.texto {
   background-color: rgba(216, 32, 155, 0.3);
   border-radius: 10px;
   color : rgb(8, 8, 8);
-  font-size : 17px;
-  margin : 40px;
+  font-size : 20px;
   padding : 10px;
-  text-align : justify;
+  text-align: justify;
   
 }
 
 p.pensamiento{
   
   color : rgb(8, 8, 8);
-  font-size : 17px;
+  font-size : 25px;
   margin : 40px;
   padding : 10px;
   text-align : center;
+}
+
+.redes {
+  text-align : center;
+  list-style : none;
+}
+li.redes {
+  display : inline-block;
+  width : 100px;
+  padding : 20px 20px; 
+}
+
+li.redes :hover{ 
+ background-color: blueviolet;
+ border-radius: 50%;
+transition : background-color 0.5s;
 }
 
 /*Pie de pagina*/

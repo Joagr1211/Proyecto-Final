@@ -25,6 +25,7 @@
     font-size : 20px;
     width : 100%;
     height : 120px;
+  
    
   }
 
@@ -131,6 +132,7 @@ body.mobile-menu-active ul#menu {
   flex-direction: column;
   align-items: center;
   width: 100%;
+
 }
 
 /*Modo Oscuro*/
@@ -286,12 +288,10 @@ li.redes {
   padding : 20px 20px; 
 }
 
-.redes :hover{
-  background-color : rgb(235, 124, 179)e;
-  color : rgb(190, 66, 153);
-  font-size : x-large;
-  font : bold;
-  transition : background-color 0.3s;
+li.redes :hover{ 
+ background-color: blueviolet;
+ border-radius: 50%;
+transition : background-color 0.5s;
 }
 
 
